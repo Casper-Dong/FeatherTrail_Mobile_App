@@ -37,12 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   http: any
   geolocator: any
-  flutter_map: ^3.1.0
+  flutter_map: ^4.0.0
   latlong2: ^0.8.1
   image_picker: ^0.8.6
-  positioned_tap_detector_2:
-    git:
-      url: https://github.com/AndreiMisiukevich/flutter-positioned-tap-detector.git
 
 dev_dependencies:
   flutter_test:

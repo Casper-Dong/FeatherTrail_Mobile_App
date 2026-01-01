@@ -153,8 +153,10 @@ class _MigrationPageState extends State<MigrationPage> {
                   ),
                   children: [
                     TileLayer(
-                      urlTemplate: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                      subdomains: ['a', 'b', 'c'],
+                      urlTemplate: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+                      subdomains: const ['a', 'b', 'c', 'd'],
+                      userAgentPackageName: 'com.codingminds.bird_migration_ai',
+                      maxZoom: 19,
                     ),
                     // Polyline Layer to Connect Markers
                     PolylineLayer(
@@ -179,6 +181,22 @@ class _MigrationPageState extends State<MigrationPage> {
                           ),
                         );
                       }).toList(),
+                    ),
+                  ],
+                  nonRotatedChildren: [
+                    Align(
+                      alignment: Alignment.bottomLeft,
+                      child: Container(
+                        padding: const EdgeInsets.all(4),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.7),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: const Text(
+                          '© OpenStreetMap contributors © CARTO',
+                          style: TextStyle(fontSize: 10, color: Colors.black87),
+                        ),
+                      ),
                     ),
                   ],
                 ),
