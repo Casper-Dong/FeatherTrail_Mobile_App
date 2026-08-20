@@ -27,7 +27,7 @@ class _RouteWidgetState extends State<RouteWidget> {
       backgroundColor: const Color(0xFF2d305b), // Dark blue background
       body: _widgetOptions.elementAt(pageIndex),
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed, // Fixes the issue of not appearing if more than 3 items
+        type: BottomNavigationBarType.fixed, // Fixes the issue of not appearing if more than 3 items in hotbar
         backgroundColor: const Color(0xFF1b1f3b), // Darker blue for navigation bar
         selectedItemColor: const Color(0xFF629584), // Soft sage green for selected item
         unselectedItemColor: Colors.white70, // Soft white for unselected items
